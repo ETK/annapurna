@@ -1,0 +1,32 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title txt-ctr-align">Post
+    <button class="button button-clear float-left m-top1" ng-click="pc.hidePostModal()">
+      <i class="icon ion-android-arrow-back"></i>
+    </button>
+    </h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="{{pc.post.img}}">
+        <h2>Test user</h2>
+        <p>{{pc.post.postedAt | date: "d MMM yyyy"}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="{{pc.post.img}}">
+        <h2>{{pc.post.name}}</h2>
+        <p>
+          {{pc.post.desc1}}
+        </p>
+        <p>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{pc.post.likes}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> {{pc.post.dislikes}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="fa fa-comments" aria-hidden="true"></i> {{pc.post.comments}}
+        </p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,63 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content class="bar-royal">
+    <ion-nav-bar class="bar-royal">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-royal">
+      <h1 class="title">Annapurna Trust
+    </h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <div class="card">
+          <div class="item item-thumbnail-left">
+            <img src="img/ionic.png"/>
+            <h2>
+              Ashish Bhosle
+            </h2>
+            <p>
+              ABCDEFGH
+            </p>
+            <p>
+              Sonpeth, Parbhani.
+            </p>
+          </div>
+        </div>
+        <ion-item class="item-icon-left" menu-close ui-sref="menu.posts">
+          <i class="large icon ion-android-search txt-color"></i> Posts
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.schemes')">
+          <i class="large icon ion-document txt-color"></i> Schemes
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.aboutus')">
+          <i class="large icon ion-person txt-color"></i> About us
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.contactus')">
+          <i class="large icon ion-android-call txt-color"></i> Contact us
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.tc')">
+          <i class="large icon ion-android-clipboard txt-color"></i> Terms & conditions
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.help')">
+          <i class="large icon ion-help txt-color"></i> Help
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.goToThisState('menu.settings')">
+          <i class="large icon ion-gear-a txt-color"></i> Settings
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="mc.signoutActionSheet()">
+          <i class="large icon ion-log-out txt-color"></i> Sign out
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

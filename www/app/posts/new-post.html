@@ -1,0 +1,28 @@
+<ion-view view-title="New post">
+
+  <ion-content class="">
+    <div class="list">
+      <form name="newPostForm" novalidate>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Post title</span>
+          <input type="text" placeholder="Post title" ng-required="true" ng-minlength="5" ng-maxlength="20">
+        </label>
+        <!--<label class="item">
+          <span class="input-label">Add image</span>
+        </label>-->
+          <button class="button button-full button-small button-stable" ng-disabled="newPostForm.$invalid">
+            Add image
+          </button>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Post description</span>
+          <textarea placeholder="Post description"></textarea>
+        </label>
+        <div class="padding">
+          <button class="button button-full button-small button-royal" ng-disabled="newPostForm.$invalid">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

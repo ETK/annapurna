@@ -1,0 +1,16 @@
+{
+  "name": "annapurna-trust",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "proxies": [{
+    "path": "/api/",
+    "proxyUrl": "http://localhost:3000"
+   }]
+}

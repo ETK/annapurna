@@ -1,0 +1,30 @@
+<ion-view view-title="Posts">
+  <ion-nav-buttons side="right">
+    <!--<div class="button button-clear" ng-click="pc.showPostsFModal()">
+      <i class="xlarge ion-search"></i>
+    </div>-->
+    <button class="button button-clear float-left" ng-click="pc.postsActionSheet()">
+      <i class="icon ion-android-more-vertical"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content class="">
+    <ion-refresher pulling-text="Fetch all posts..." on-refresh="pc.pullRefresher()"
+        pulling-icon="ion-android-refresh" spinner="ios">
+    </ion-refresher>
+
+    <div class="card">
+      <div class="item item-thumbnail-left" ng-repeat="p in pc.posts" ng-click="pc.viewPost($index)">
+        <img src="{{p.img}}">
+        <h2>{{p.name}}</h2>
+        <p>{{p.desc}}</p>
+        <p>{{p.postedAt | date: "d MMM yyyy"}}</p>
+        <p>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{p.likes}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> {{p.dislikes}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="fa fa-comments" aria-hidden="true"></i> {{p.comments}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

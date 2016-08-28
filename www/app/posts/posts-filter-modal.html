@@ -1,0 +1,55 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title txt-ctr-align">Search posts
+       <button class="button button-clear float-right m-top1" ng-click="pc.hidePostsFModal()">
+         <i class="icon ion-android-close"></i>
+       </button>
+     </h1>
+  </ion-header-bar>
+  <ion-content>
+    <!-- Search by Id -->
+    <form name="seachByIdForm" novalidate>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Search by ID</span>
+        <input type="text" placeholder="Search by ID" ng-model="pc.searchId" ng-required="true" ng-minlength="8" ng-maxlength="8">
+      </label>
+      <div class="padding">
+        <button class="button button-full button-small button-royal" ng-disabled="seachByIdForm.$invalid" ng-click="pc.searchProfile(pc.searchId)">
+          Search by ID
+        </button>
+      </div>
+    </form>
+
+    <div class="padding-bottom">
+      <button class="button button-full button-small button-stable">
+        OR
+      </button>
+    </div>
+
+    <!-- Profile filter form -->
+    <form name="profilesFilterForm" novalidate>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Type
+        </div>
+        <select ng-model="pc.pff.complexion">
+          <option ng-repeat="c in pc.complexionAny">{{c}}</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Name" ng-required="true" ng-minlength="8" ng-maxlength="8">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Category</span>
+        <input type="text" placeholder="Category" ng-required="true" ng-minlength="8" ng-maxlength="8">
+      </label>
+      <div class="padding">
+        <button class="button button-full button-small button-royal" ng-disabled="profilesFilterForm.$invalid" ng-click="pc.filterProfiles()">
+          Search
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

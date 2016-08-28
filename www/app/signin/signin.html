@@ -1,0 +1,34 @@
+<ion-view side="right" view-title="Annapurna Trust" title="Annapurna Trust" hide-back-button="true" hide-nav-bar="false">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear float-left" ui-sref="home">
+      <i class="icon ion-android-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="">
+    <div class="padding">
+      <div class="logo center">
+      </div>
+    </div>
+    <div class="list">
+      <form name="signinForm" novalidate>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Mobile number</span>
+          <input type="tel" placeholder="Mobile number" ng-model="signinCtrl.sf.phone" ng-required="true" ng-minlength="10" ng-maxlength="10">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="signinCtrl.sf.password" ng-required="true" ng-minlength="6">
+        </label>
+        <div class="padding">
+          <button class="button button-full button-small button-royal" ng-disabled="signinForm.$invalid" ng-click="signinCtrl.signin()">
+            Sign in
+          </button>
+        </div>
+        <div class="row padding">
+          <div class="signin-su" ui-sref="signup">Sign up</div>
+          <div class="signin-fp" ui-sref="forgotpassword">Forgot password?</div>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

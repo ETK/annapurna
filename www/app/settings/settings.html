@@ -1,0 +1,44 @@
+<ion-view view-title="Settings">
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+  <ion-content class="">
+    <div class="list">
+      <form name="updatePasswordForm" novalidate ng-show="sc.isUpdatePassword">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Old password</span>
+          <input type="password" name="oldPassword" placeholder="Old password" ng-model="sc.passuf.oldPassword" ng-required="true" ng-minlength="6">
+          <div class="app-error" ng-messages="updatePasswordForm.oldPassword.$error" ng-if="updatePasswordForm.oldPassword.$dirty">
+            <div ng-message="required">Password is required.</div>
+            <div ng-message="minlength">Password must be at least 6 characters long.</div>
+            <div ng-message="maxlength">Password can be at most 12 characters long.</div>
+          </div>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">New password</span>
+          <input type="password" name="newPassword" placeholder="New password" ng-model="sc.passuf.password" ng-required="true" ng-minlength="6">
+          <div class="app-error" ng-messages="updatePasswordForm.newPassword.$error" ng-if="updatePasswordForm.newPassword.$dirty">
+            <div ng-message="required">Password is required.</div>
+            <div ng-message="minlength">Password must be at least 6 characters long.</div>
+            <div ng-message="maxlength">Password can be at most 12 characters long.</div>
+          </div>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Re-type new password</span>
+          <input type="password" name="reNewPassword" placeholder="Re-type new password" ng-model="sc.passuf.rePassword" ng-required="true" ng-minlength="6">
+          <div class="app-error" ng-messages="updatePasswordForm.reNewPassword.$error" ng-if="updatePasswordForm.reNewPassword.$dirty">
+            <div ng-message="required">Password is required.</div>
+            <div ng-message="minlength">Password must be at least 6 characters long.</div>
+            <div ng-message="maxlength">Password can be at most 12 characters long.</div>
+          </div>
+        </label>
+        <div class="padding">
+          <button class="button button-small button-full button-royal" ng-disabled="updatePasswordForm.$invalid" ng-click="">
+            Update password
+          </button>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
