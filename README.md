@@ -1,6 +1,6 @@
-#A small matrimony app using Ionic
+#A small Test app using Ionic
 
-[Build a matrimony app using Ionic]
+[Build a Test app using Ionic]
 
 ##How to setup?
 
